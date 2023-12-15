@@ -16,6 +16,8 @@ To compile the program, use the following command:
 g++ main.cpp -o ifacepicker
 ```
 
+Or use `make`.
+
 ## Usage
 
 Run the compiled program without any arguments to display a list of network interfaces. Follow the on-screen prompts to select an interface for IP configuration.
