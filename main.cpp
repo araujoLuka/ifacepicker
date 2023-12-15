@@ -1,12 +1,12 @@
 /*
- * ifacepicker - A program to list network interfaces and allow selection for IP configuration.
+ * ifacepicker - A C++ program for easy listing and selection of network interfaces and IP addresses using 'ip a'.
  * Lucas Araujo - 2023-12-15
  *
  * Purpose:
- *   The program uses the 'ip a' command to gather information about network interfaces and their IP addresses.
- *   After listing, it enables the user to choose an interface for IP configuration.
- * Compilation:
- *   To compile the program, use the following command:   g++ main.cpp -o ifacepicker
+ *   `ifacepicker` simplifies the process of selecting a network interface or IP address, aiding in scripting scenarios.
+ *   It enhances visibility across interfaces, making it useful for various tasks, such as configuring Wake-on-LAN.
+ *
+ * Compilation: g++ main.cpp -o ifacepicker
  */
 
 #include <iostream>
@@ -16,11 +16,11 @@
 #include <string>
 #include <vector>
 
-// Função para exibir a mensagem de ajuda
+// Function to display the help message
 void showHelp(const std::string& programName) {
     std::ostringstream helpMessage;
     helpMessage << "Usage: " << programName << " [-h|--help]" << std::endl;
-    helpMessage << "\nList network interfaces and allow selecting one for IP configuration." << std::endl;
+    helpMessage << "\nList and easily select network interfaces, displaying their respective IP addresses." << std::endl;
     helpMessage << "\nOutput:" << std::endl;
     helpMessage << "  IFACE=<interface-name>" << std::endl;
     helpMessage << "  IPADDR=<configured-ip>" << std::endl;
